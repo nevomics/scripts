@@ -305,7 +305,7 @@ with open(file_path) as fq:
     for e, i in enumerate(fq):
         i = i.rstrip()
         inpfile.append(i.split('\t'))
-e1 = [i[0] for e, i in enumerate(inp_file) if e == 0][0]
+e1 = [i[0] for e, i in enumerate(inpfile) if e == 0][0]
 
 id_organism = requests.get("https://rest.uniprot.org/uniprotkb/"+e1+".txt").content.decode().split('\n')
 
